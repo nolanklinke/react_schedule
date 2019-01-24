@@ -23,6 +23,10 @@ class Modal extends Component {
     this.props.onClose && this.props.onClose(event);
   };
 
+  onSubmit = event => {
+    this.props.onSubmit && this.props.onSubmit(event);
+  };
+
   render() {
     if (!this.props.show) {
       return null;
@@ -53,9 +57,16 @@ class Modal extends Component {
           <a
             href="#0"
             className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-green"
-            onClick={this.onClose}
+            onClick={this.onSubmit}
           >
             Confirm Time
+          </a>
+          <a
+            href="#0"
+            className="f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-red"
+            onClick={this.onClose}
+          >
+            Cancel
           </a>
         </div>
       </div>

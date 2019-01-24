@@ -5,6 +5,7 @@ class Schedule extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isBooked: false,
       show: false,
       style: "f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-blue"
     };
@@ -18,21 +19,16 @@ class Schedule extends Component {
 
   closeModal = event => {
     this.setState({
-      show: false
+      show: false,
+      style: "f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-blue"
     });
+  };
 
-    if (
-      this.state.style ===
-      "f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-blue"
-    ) {
-      this.setState({
-        style: "f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-red"
-      });
-    } else {
-      this.setState({
-        style: "f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-blue"
-      });
-    }
+  bookTime = event => {
+    this.setState({
+      show: false,
+      style: "f6 link dim br-pill ph3 pv2 mb2 dib white bg-dark-red"
+    });
   };
 
   render() {
@@ -47,7 +43,11 @@ class Schedule extends Component {
         >
           {this.props.children}
         </a>
-        <Modal show={this.state.show} onClose={this.closeModal} />
+        <Modal
+          show={this.state.show}
+          onClose={this.closeModal}
+          onSubmit={this.bookTime}
+        />
       </div>
     );
   }
