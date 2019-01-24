@@ -21,11 +21,11 @@ class App extends Component {
         <Schedule>9:00 AM - 10:00 AM</Schedule>
         <Schedule>10:00 AM - 11:00 AM</Schedule>
         <Schedule>11:00 AM - 12:00 PM</Schedule>
-        <Schedule>1:00 PM - 2:00PM</Schedule>
-        <Schedule>2:00 PM - 3:00PM</Schedule>
-        <Schedule>2:00 PM - 3:00PM</Schedule>
-        <Schedule>3:00 PM - 4:00PM</Schedule>
-        <Schedule>4:00 PM - 5:00PM</Schedule>
+        <Schedule> 1:00 PM - 2:00 PM </Schedule>
+        <Schedule> 2:00 PM - 3:00 PM </Schedule>
+        <Schedule> 2:00 PM - 3:00 PM </Schedule>
+        <Schedule> 3:00 PM - 4:00 PM </Schedule>
+        <Schedule> 4:00 PM - 5:00 PM </Schedule>
       </div>
     );
   }
