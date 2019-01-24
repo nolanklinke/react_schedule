@@ -21,6 +21,14 @@ class Modal extends Component {
 
   onClose = event => {
     this.props.onClose && this.props.onClose(event);
+    this.onCancel();
+  };
+
+  onCancel = event => {
+    this.setState({
+      name: "",
+      phoneNumber: ""
+    });
   };
 
   onSubmit = event => {
